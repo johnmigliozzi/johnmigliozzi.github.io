@@ -1,7 +1,39 @@
 body{
-
-	Background: #ffffff;
+	Background: white;
 	font-family: Cambria;
+  height: 100%;
+	width: 100%;
+}
+
+#Banner{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: white;
+	height: 5em;
+	width: 100%;
+	padding: .5em;
+	/* border-bottom-style: solid;
+	border-bottom-width: 1px; */
+}
+
+#Content{
+	margin-top: 6em;
+	background: white;
+	width: 100%; */
+	padding: .5em;
+}
+
+.Block{
+	/* background: #dddddd; */
+
+	border-bottom-style: solid;
+  border-color: #999999;
+	border-bottom-width: 1px;
+
+	padding: 0.5em;
+	/* margin: 0.5em; */
+	margin-bottom: 2em;
 }
 
 a:link{
@@ -22,25 +54,14 @@ h2{
 	display: inline;
 }
 
-.hr {
+#horizontal_rule {
 width: 100%;
 height: 1px;
 border: 0;
 background-color: #000000;
 }
 
-
 .Button{
-	background: transparent;
-	width: 10em;
-	line-height: 2em;
-	text-align: center;
-	display: inline;
-	float:right;
-}
-
-.Button-color{
-	background: #dddddd;
 	width: 10em;
 	line-height: 2em;
 	text-align: center;
@@ -50,19 +71,4 @@ background-color: #000000;
 
 .Button:Hover{
 	background: #dddddd;
-}
-
-
-.Banner{
-	height: 6em;
-}
-
-.Content{
-	background: blue;
-/*	background-image: url('guitar.png');
-	-moz-background-size:250px 500px; /* Firefox 3.6 */
-/*	background-size:250px 500px;
-	background-repeat:no-repeat;
-	background-position:right top;
-	height: 500px;*/
 }
