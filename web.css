@@ -1,0 +1,68 @@
+body{
+
+	Background: #ffffff;
+	font-family: Cambria;
+}
+
+a:link{
+	color: #000000;
+	text-decoration: none;
+}
+
+a:visited{
+	color: #000000;
+	text-decoration: none;
+}
+
+h1{
+	display: inline;
+}
+
+h2{
+	display: inline;
+}
+
+.hr {
+width: 100%;
+height: 1px;
+border: 0;
+background-color: #000000;
+}
+
+
+.Button{
+	background: transparent;
+	width: 10em;
+	line-height: 2em;
+	text-align: center;
+	display: inline;
+	float:right;
+}
+
+.Button-color{
+	background: #dddddd;
+	width: 10em;
+	line-height: 2em;
+	text-align: center;
+	display: inline;
+	float:right;
+}
+
+.Button:Hover{
+	background: #dddddd;
+}
+
+
+.Banner{
+	height: 6em;
+}
+
+.Content{
+	background: blue;
+/*	background-image: url('guitar.png');
+	-moz-background-size:250px 500px; /* Firefox 3.6 */
+/*	background-size:250px 500px;
+	background-repeat:no-repeat;
+	background-position:right top;
+	height: 500px;*/
+}
