@@ -1,8 +1,5 @@
 body{
-	Background: white;
 	font-family: Cambria;
-  height: 100%;
-	width: 100%;
 }
 
 #Banner{
@@ -12,28 +9,75 @@ body{
 	background: white;
 	height: 5em;
 	width: 100%;
-	padding: .5em;
-	/* border-bottom-style: solid;
-	border-bottom-width: 1px; */
+	padding-top: .5em;
+	padding-left: .5em;
+	padding-right: .5em;
+}
+
+#horizontal_rule {
+	width: 100%;
+	height: 1px;
+	border: 0;
+	background-color: #000000;
 }
 
 #Content{
 	margin-top: 6em;
 	background: white;
-	width: 100%; */
-	padding: .5em;
+	width: calc(100% - 11em);
+	left: 0;
+}
+
+#Tail{
+	width: 100%;
+	padding-top: .5em;
+	text-align: center;
+	background: white;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+#RightBar{
+	position: fixed;
+	top: 6em;
+	Right: 0;
+	background: white;
+	height: 100%;
+	width: 10em;
+	padding-top: .5em;
+	padding-left: .5em;
+	padding-right: .5em;
+}
+
+.Button{
+	width: 10em;
+	line-height: 2em;
+	text-align: center;
+	display: inline;
+	float:right;
+}
+
+.LeftButton{
+	width: 10em;
+	line-height: 2em;
+	text-align: center;
+	display: inline;
+	float:left;
+}
+
+.Button:Hover{
+	background: #dddddd;
 }
 
 .Block{
 	/* background: #dddddd; */
-
 	border-bottom-style: solid;
   border-color: #999999;
 	border-bottom-width: 1px;
 
-	padding: 0.5em;
-	/* margin: 0.5em; */
-	margin-bottom: 2em;
+	margin-bottom: 1em;
+	padding-top: 1em;
 }
 
 a:link{
@@ -52,23 +96,4 @@ h1{
 
 h2{
 	display: inline;
-}
-
-#horizontal_rule {
-width: 100%;
-height: 1px;
-border: 0;
-background-color: #000000;
-}
-
-.Button{
-	width: 10em;
-	line-height: 2em;
-	text-align: center;
-	display: inline;
-	float:right;
-}
-
-.Button:Hover{
-	background: #dddddd;
 }
