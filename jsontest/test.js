@@ -2,15 +2,10 @@
 
 function getFile(){
 
-  return fetch('https://johnmigliozzi.com/misc/test1.json',{
-    mode:{
-      'no-cors'
-    }
+  return fetch('test1.json',{
     headers: {
       'Content-Type': 'application/json',
-      'Accept': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, PUT'
+      'Accept': 'application/json'
     }
   }).then((response) => response.json())
 };
