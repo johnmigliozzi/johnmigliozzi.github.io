@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<title>Test</title>
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			background: blue;
+			transition: background 5500ms ease-in-out;
+			display: inline-block;
+		}
+		.box.show{
+			background: red;
+			transition: background 150ms ease-in-out;
+		}
+	</style>
+
+	</head>
+	<body>
+
+<div class="slidecontainer">
+  <input type="range" min="0" max="10000" value="5000" class="slider" id="myRange">
+<p>Value: <span id="demo"></span></p>
+</div>
+
+
+<div class="box" onmouseover="show(this)" onmouseout="hide(this)"></div>
+<div class="box" onmouseover="show(this)" onmouseout="hide(this)"></div>
+<div class="box" onmouseover="show(this)" onmouseout="hide(this)"></div>
+<div class="box" onmouseover="show(this)" onmouseout="hide(this)"></div>
+<div class="box" onmouseover="show(this)" onmouseout="hide(this)"></div>
+
+	<script>
+
+function show(x){
+	x.classList.toggle("show");
+}
+function hide(x){
+	x.classList.toggle("show");
+}
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+
+
+	var x = document.getElementsByClassName("box");
+	console.log(x);
+	for (i in x){
+		console.log("background " + this.value + "ms ease-in-out");
+		//x[i].style.transition = "background " + this.value + "ms ease-in-out";
+		//x[i].style.background = "green";
+	}
+
+	var y = document.querySelectorAll("box");
+	console.log(y);
+	for (i in y){
+		console.log("background 150ms ease-in-out");
+		//y[i].style.transition = "background 150ms ease-in-out";
+		//y[i].style.background = "green";
+	}
+
+
+}
+</script>
+
+	</body>
+</html>
