@@ -21,16 +21,16 @@ function play(id) {
         "&nbsp;&nbsp;Round #:&nbsp;" + roundnumber;
 
     seedvalue = id.value;
-
     Math.seedrandom(seedvalue.toLowerCase());
 
-    catlist.sort(() => Math.random() - 0.5);
+    // catlist.sort(() => Math.random() - 0.5);
+    shuffle(catlist);
 
     for (let i = 0; i < 12; i++) {
         document.getElementById("li" + i).innerHTML = catlist[i];
     }
 
-    letters.sort(() => Math.random() - 0.5);
+    shuffle(letters);
 
     document.getElementById("letter").innerHTML = letters[0];
 
@@ -38,7 +38,7 @@ function play(id) {
     stopTimer();
 
     console.log("starting timer");
-    startTimer(20);
+    startTimer(180);
     //mytimer = new Timer(20, 15, "end");
     //mytimer.start();
 }
@@ -82,6 +82,14 @@ function stopTimer() {
 function refresh() {
     location.reload();
 }
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 /*
 class Timer {
     totaltime = 0;
