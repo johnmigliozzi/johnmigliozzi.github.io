@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Splattergories</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="web.css" />
+        <script src="splattergories.js"></script>
+        <script src="seedrandom.js"></script>
+        <script src="categories.js"></script>
+
+    </head>
+    <body>
+        <div id="header">
+            Splattergories!
+        </div>
+
+        <div class="flex-grid">
+
+            <div class="col">
+
+                <h3>Categories</h3>
+                
+                <ol>
+                    <li id=li0></li>
+                    <li id=li1></li>
+                    <li id=li2></li>
+                    <li id=li3></li>
+                    <li id=li4></li>
+                    <li id=li5></li>
+                    <li id=li6></li>
+                    <li id=li7></li>
+                    <li id=li8></li>
+                    <li id=li9></li>
+                    <li id=li10></li>
+                    <li id=li11></li>
+                </ol>
+            </div>
+
+            <div class="col">
+
+                <div id="seedarea">
+                    <div id=seedbox-title>Game ID:&nbsp;</div><input type="text" id="seedbox"></input>
+                    <input id="beginbutton" type="submit" value="Begin" onclick="play(seedbox)"></input>
+                    <div id="roundnumber"></div>
+                    <input type="submit" id="refreshbutton" value="New Game" onclick="refresh()"></input>
+                </div>
+
+                <p id=timerp>Timer:<div id=timer></div></p>
+                <p id=letterp>Letter:<div id=letter></div></p>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>
