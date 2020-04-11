@@ -1,4 +1,4 @@
-var catlist = [
+var standardList = [
     "A BOY’S NAME",
     "U.S. CITIES",
     "THINGS THAT ARE COLD",
@@ -190,8 +190,10 @@ var catlist = [
     "THINGS IN AN AIRPORT",
     "WORDS WITH DOUBLE LETTERS",
     "FOUND IN NEW YORK CITY",
-    "THINGS IN FAIRY TALES "
+    "THINGS IN FAIRY TALES ",
 ];
+
+customList = [""];
 
 letters = [
     "A",
@@ -213,9 +215,5 @@ letters = [
     "R",
     "S",
     "T",
-    "U",
-    "V",
     "W",
-    "Y",
-    "Z"
 ];

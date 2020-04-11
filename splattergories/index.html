@@ -3,23 +3,52 @@
     <head>
         <title>Splattergories</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" type="text/css" href="web.css" />
-        <script src="splattergories.js"></script>
-        <script src="seedrandom.js"></script>
-        <script src="categories.js"></script>
-
+        <link rel="stylesheet" type="text/css" href="/css/game.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="splattergoriesMain.js"></script>
+        <script src="splattergoriesLists.js"></script> 
+        <script src="/js/seedrandom.js"></script>
+        <script src="/js/enterGameID.js"></script>
+        <script src="/js/prepareGameArea.js"></script>
+        <script src="/js/timer.js"></script>
+        <script src="/js/shuffle.js"></script>
+        <script src="/js/refresh.js"></script>
     </head>
+
     <body>
-        <div id="header">
-            Splattergories!
+
+        <!-- Header -->
+        <div id="header">Splattergories!</div>
+
+
+        <!-- Splash Screen loaded from /html/splash-screen.html -->
+        <div id="splash-screen"></div>
+
+
+        <div id="splash-screen-game-specific">
+
+            <div id="settings">           
+                <h3>Settings</h3>
+                <p>Categories List:</p>
+                <input type="radio" id="standard-list-button" name="cat-library" value="standard" checked>
+                <label for="Standard">Standard</label><br>
+                <input type="radio" id="custom-list-button" name="cat-library" value="custom">
+                <label for="Custom">Custom</label><br>
+            </div>
+ 
+            <div id="instructions">
+                <h3>Instructions</h3>
+                <P>Dan and Jeff should put their phones away.</P>
+            </div>
+
         </div>
 
-        <div class="flex-grid">
+        <!-- Main Game Area -->
+        <div id="game-area-two-column">
 
-            <div class="col">
+            <div class="column">
 
                 <h3>Categories</h3>
-                
                 <ol>
                     <li id=li0></li>
                     <li id=li1></li>
@@ -36,17 +65,12 @@
                 </ol>
             </div>
 
-            <div class="col">
+            <div class="column">
 
-                <div id="seedarea">
-                    <div id=seedbox-title>Game ID:&nbsp;</div><input type="text" id="seedbox"></input>
-                    <input id="beginbutton" type="submit" value="Begin" onclick="play(seedbox)"></input>
-                    <div id="roundnumber"></div>
-                    <input type="submit" id="refreshbutton" value="New Game" onclick="refresh()"></input>
-                </div>
+                <div id="game-info"></div>
 
-                <p id=timerp>Timer:<div id=timer></div></p>
-                <p id=letterp>Letter:<div id=letter></div></p>
+                <p>Timer:<div id=timer></div></p>
+                <p>Letter:<div id=letter></div></p>
 
             </div>
 
