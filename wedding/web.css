@@ -1,0 +1,7 @@
+body {
+    /* background-color: #fff1e8; */
+    background-image: url("contour-double-flip.svg");
+    background-repeat: repeat-y;
+
+    background-size: 100%;
+}
