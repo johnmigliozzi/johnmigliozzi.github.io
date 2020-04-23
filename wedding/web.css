@@ -1,7 +1,161 @@
 body {
-    /* background-color: #fff1e8; */
-    background-image: url("contour-double-flip.svg");
-    background-repeat: repeat-y;
+    font-family: "Times";
+    overflow: hidden;
+}
+body::after {
+    content: "";
+    background: url("img/background-e2-wrap.png");
 
+    /* background-image: url("img/contour-double-flip.svg"); */
+    /* background-image: url("img/background-wrap.png"); */
+    /* background-image: url("img/background-e2-wrap.png"); */
+
+    /* background-size: cover; */
     background-size: 100%;
+
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#names {
+    text-align: center;
+
+    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+    font-size: calc(28px + (70 - 28) * ((100vw - 300px) / (1600 - 300)));
+    font-variant-caps: small-caps;
+    padding-top: 1em;
+    padding-bottom: 0.25em;
+}
+
+#name-danielle {
+    animation-name: danielle-animation;
+    animation-duration: 2s;
+    /* animation-fill-mode: forwards; */
+    position: relative;
+}
+
+#name-john {
+    animation-name: john-animation;
+    animation-duration: 2s;
+    /* animation-fill-mode: forwards; */
+    position: relative;
+}
+
+#name-and {
+    animation-name: fade-in;
+    animation-duration: 2s;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    /* font-family: "Mrs Saint Delafield";
+    font-size: 1.5em; */
+}
+
+#tagline {
+    animation-name: fade-up;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    position: relative;
+    padding-bottom: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+@keyframes danielle-animation {
+    from {
+        /* color: red; */
+        left: -1000px;
+    }
+    to {
+        left: 0px;
+    }
+}
+
+@keyframes john-animation {
+    from {
+        left: 1000px;
+    }
+    to {
+        left: 0px;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        bottom: -50px;
+    }
+    to {
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+#nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    /* width: 100%; */
+    margin: 0;
+    /* border-style: solid; */
+}
+@media (max-width: 900px) {
+    #nav-bar {
+        flex-direction: column;
+    }
+    #nav-bar > div {
+        border-style: solid;
+        width: 60%;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+        border-width: 1px;
+        border-color: gray;
+    }
+}
+@media (min-width: 900px) {
+    #nav-bar {
+        flex-direction: row;
+    }
+    #nav-bar > div {
+        margin-left: 1em;
+        margin-right: 1em;
+
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+#nav-bar > div {
+    /* background-color: #f1f1f1; */
+    /* width: 100px; */
+
+    text-align: center;
+    font-weight: bold;
+}
+#nav-bar > div:hover {
+    text-decoration: underline;
+}
+.content {
+    text-align: center;
+    padding: 1em;
+    /* border-style: solid; */
 }
